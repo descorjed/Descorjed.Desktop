@@ -1,0 +1,28 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Descorjed.Desktop.ViewModels;assembly=Descorjed.Desktop"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Descorjed.Desktop.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Descorjed.Desktop">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+  <Window.Styles>
+    <Style Selector="Button.ConnectBtn">
+      <Setter Property="Background" Value="# 7289DA" />
+      <Setter Property = "BorderThickness" Value = "2" />
+      <Setter Property = "BorderBrush" Value = "# FFFFFFFF" />
+      
+    </Style>
+  </Window.Styles>
+
+  <TextBlock Text="{Binding State}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  <Button Classes="ConnectBtn">Connect</Button>
+
+
+</Window>
